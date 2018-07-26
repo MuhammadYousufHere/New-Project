@@ -14,7 +14,6 @@ nav	{
 nav ul li {
 
 	list-style-type: none;
-	line-height: 64px;
 	
 	display: flex;
 
@@ -34,8 +33,9 @@ nav ul li a {
 nav ul {
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 	margin: 0;
-
+	height: 100%;
 	
 
 	
@@ -44,4 +44,26 @@ a:hover {
 	border-bottom: 3px solid #f0da8cdb;
 	transition: 0.5s;
 
+}
+
+nav ul li.show-small-only {
+	display: none !important;
+	color: white;
+	font-size: 2em;
+	display: inline-block;
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 470px) {
+	nav ul li.show-large-only {
+		display: none;
+	}
+	nav ul li.show-small-only {
+		display: flex !important;
+	}
 }
